@@ -4,7 +4,7 @@ if [ $USER != "root" ] ; then
 	echo " This script must be run as root !"
 	echo ""
 	
-	exit 1
+	exit
 fi
 
 if ! ping -c 1 google.com >> /dev/null 2>&1 ; then
@@ -12,7 +12,7 @@ if ! ping -c 1 google.com >> /dev/null 2>&1 ; then
 	echo " You are not connected to internet please check your connection !"
 	echo ""
 	
-	exit 2
+	exit
 fi
 
 green="\033[1;32m"
