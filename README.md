@@ -1,4 +1,4 @@
-# Proxmox-prepare
+# Proxmox-prepare [![Build Status](https://travis-ci.org/Punk--Rock/Proxmox-prepare.svg?branch=master)](https://travis-ci.org/Punk--Rock/Proxmox-prepare)
 
 ## About
 
