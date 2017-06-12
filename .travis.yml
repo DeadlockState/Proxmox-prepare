@@ -1,4 +1,4 @@
 language: bash
 
 script:
-- bash Proxmox_prepare.sh
+- bash proxmox_prepare.sh
