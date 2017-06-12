@@ -35,11 +35,11 @@ Just a fresh install of Proxmox VE :)
 Run this script __just after__ installing Proxmox VE
 
 ```shell
-wget https://raw.githubusercontent.com/Punk--Rock/Proxmox-prepare/master/Proxmox_prepare.sh
+wget https://raw.githubusercontent.com/Punk--Rock/Proxmox-prepare/master/proxmox_prepare.sh
 
-chmod +x Proxmox_prepare.sh
+chmod +x proxmox_prepare.sh
 
-./Proxmox_prepare.sh
+./proxmox_prepare.sh
 ```
 
 ## Troubleshooting
