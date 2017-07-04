@@ -1,4 +1,4 @@
-#!bin/sh
+#!/bin/sh
 rm -rf /.acme.sh/
 		
 rm -rf /root/.acme.sh
