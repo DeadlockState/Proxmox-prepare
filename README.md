@@ -13,8 +13,7 @@ Preparing Proxmox VE after installation
 Tested on 
 
 * [x] Proxmox VE 4.4
-* [x] Proxmox VE 5.0 beta 1
-* [x] Proxmox VE 5.0 beta 2
+* [x] Proxmox VE 5.0
 
 ## Features
 
