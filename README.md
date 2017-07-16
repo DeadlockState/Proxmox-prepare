@@ -6,7 +6,7 @@ Preparing Proxmox VE after installation
 
 ## Screenshots
 
-![screenshot](http://i.imgur.com/NzLskyS.png)
+![screenshot](http://i.imgur.com/uhiRiq7.png)
 
 ## Compatibility
 
@@ -21,6 +21,7 @@ Tested on
 - Install Fail2ban to protect Proxmox VE Web UI from too many connections attempts (default 4 max. retry and 12 hours of ban time you can modify it in ```/etc/fail2ban/jail.local```)
 - Disable SSH root access
 - Change SSH port number
+- Add a bridged network interface
 - Generate a Let's Encrypt SSL certificate with auto renewals
 
 ## Installation
