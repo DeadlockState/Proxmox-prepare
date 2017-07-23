@@ -21,6 +21,45 @@ orange="\033[0;33m"
 red="\033[1;31m"
 nc="\033[0m"
 
+# Post treatment if you are using Proxmox on an Online.net Dedibox
+if grep -qF "online.net" /etc/apt/sources.list; then
+	echo ""
+	echo " Proxmox is installed on an Online.net Dedibox please wait a few seconds while the script is preparing your server..."
+	
+	cd /etc/apt/
+
+	mv sources.list sources.list.default
+
+	touch sources.list
+	
+	if grep -qF "stretch" /etc/apt/sources.list; then
+		echo "deb http://ftp.debian.org/debian stretch main contrib
+
+# security updates
+deb http://security.debian.org stretch/updates main contrib" > sources.list
+	else
+		echo "deb http://ftp.debian.org/debian jessie main contrib
+
+# security updates
+deb http://security.debian.org jessie/updates main contrib" > sources.list
+	fi
+	
+	cd sources.list.d/
+	
+	rm pve-install-repo.list
+	
+	apt-get update > /dev/null 2>&1
+	
+	cd /etc/pve/
+	
+	touch user.cfg
+	
+	echo "root:root@pam:1:0:::::" > user.cfg
+	
+	sed -i '/nameserver 127.0.0.1/d' /etc/resolv.conf
+fi
+# Post treatment if you are using Proxmox on an Online.net Dedibox
+
 version=`pveversion | awk -v FS="(manager/| )" '{print $2}'`
 email=`head -n 1 /etc/pve/user.cfg | grep -o -P '(?<=:::).*(?=::)'`
 fqdn=`hostname -f`
