@@ -14,6 +14,7 @@ Tested on
 
 * [x] Proxmox VE 4.4
 * [x] Proxmox VE 5.0
+* [x] Proxmox VE 5.1
 
 ## Features
 
